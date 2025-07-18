@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thirumalaivasan Nedunchezhian - Portfolio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-poppins bg-green-900 min-h-screen text-white dark:bg-gray-900 dark:text-gray-200">
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div class="w-12 h-12 border-4 border-t-[#00ffae] border-gray-800 rounded-full animate-spin"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-green-900 text-white py-3 px-4 sm:px-6 fixed top-0 left-0 w-full z-40 flex flex-wrap justify-between items-center shadow-md transition-all duration-300 dark:bg-gray-900 dark:text-gray-100" id="header">
+    <div class="font-bold text-lg sm:text-2xl">Thirumalaivasan Nedunchezhian</div>
+    <button class="sm:hidden text-2xl focus:outline-none" id="menu-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="hidden sm:block mt-2 sm:mt-0 w-full sm:w-auto" id="nav-menu">
+      <ul class="flex flex-col sm:flex-row sm:space-x-6 text-sm sm:text-base font-medium">
+        <li><a href="#home" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Home</a></li>
+        <li><a href="#about" class="hover:underline py-2 sm:py-0 transition-colors duration-200">About</a></li>
+        <li><a href="#skills" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Skills</a></li>
+        <li><a href="#education" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Education</a></li>
+        <li><a href="#awards" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Awards</a></li>
+        <li><a href="#roles" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Roles</a></li>
+        <li><a href="#contact" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center space-x-2">
+      <div class="relative w-8 h-8 sm:w-12 sm:h-12">
+        <svg class="w-full h-full">
+          <circle cx="50%" cy="50%" r="45%" fill="none" stroke="#4ade80" stroke-width="2"/>
+          <line id="second-hand" x1="50%" y1="50%" x2="50%" y2="20%" stroke="#00ffae" stroke-width="1.5"/>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center text-[10px] sm:text-xs font-medium" id="current-time"></div>
+      </div>
+      <div class="flex flex-col items-center group">
+        <div class="flex items-center space-x-1">
+          <i class="fas fa-calendar-alt text-green-400 text-xs sm:text-sm group-hover:text-[#00ffae] transition-colors duration-200"></i>
+          <span id="current-date" class="text-[10px] sm:text-xs font-medium"></span>
+        </div>
+        <span id="current-year" class="text-[8px] sm:text-[10px] font-medium"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="home" class="relative w-full h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-32">
+    <div id="bg-grid" class="absolute inset-0 grid grid-rows-5 grid-cols-7 gap-0 z-0 bg-grid-wrapper"></div>
+    <div class="absolute inset-0 bg-green-900 opacity-60 z-10 mix-blend-multiply"></div>
+    <div class="relative z-20 text-center text-white dark:text-gray-200 px-4 animate-fade-in">
+      <h1 class="text-3xl sm:text-5xl font-bold">Thirumalaivasan Nedunchezhian</h1>
+      <p class="text-lg sm:text-2xl mt-2">Graduate Software Engineer</p>
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section id="about" class="pt-20 sm:pt-24 bg-black text-white dark:bg-gray-900 dark:text-gray-200 section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="md:grid md:grid-cols-4 gap-6">
+        <div class="md:col-span-1">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-2">About Me</h2>
+          <div class="w-16 h-1 bg-[#00ffae] dark:bg-gray-200 mb-4"></div>
+        </div>
+        <div class="md:col-span-3">
+          <p class="text-base sm:text-lg text-justify leading-relaxed mb-6">
+            Driven Software Professional with a Passion for Innovation and Leadership.<br>
+            I am a passionate software engineer with hands-on experience in team collaboration, project execution, and people management. With a strong foundation in software development principles and a commitment to continuous learning, I aim to bring innovative solutions to real-world challenges.<br>
+            Currently, I serve as a Graduate Software Trainee at Psiog Digital as part of the prestigious IMPACT 25 Program, where I actively contribute to agile-based development projects and sharpen my skills in full-stack development and professional excellence.
+          </p>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="assets/Thirumalaivasan_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <button class="bg-gray-600 hover:bg-[#00ffae] hover:text-black dark:bg-gray-700 dark:hover:bg-[#00ffae] dark:hover:text-black dark:text-gray-200 font-bold py-2 px-6 rounded flex items-center justify-center mx-auto transition-colors duration-300">
+            <span class="mr-2">VIEW CV</span><i class="fas fa-file-alt"></i>
+          </button>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10">
+        <div class="relative h-48 sm:h-64 bg-green-100 p-2 rounded-xl shadow transform transition-transform duration-300 hover:scale-105" onclick="this.classList.toggle('active')">
+          <img src="assets/pi1.jpg" alt="Project Image 1" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <div class="relative h-48 sm:h-64 bg-white p-2 rounded-xl shadow transform transition-transform duration-300 hover:scale-105" onclick="this.classList.toggle('active')">
+          <img src="assets/pi2.jpg" alt="Project Image 2" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <div class="relative h-48 sm:h-64 bg-green-100 p-2 rounded-xl shadow transform transition-transform duration-300 hover:scale-105" onclick="this.classList.toggle('active')">
+          <img src="assets/pi3.jpg" alt="Project Image 3" class="w-full h-full object-cover rounded-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech-Skills Section -->
+  <section id="skills" class="pt-16 sm:pt-20 pb-16 bg-black text-white dark:bg-gray-900 dark:text-gray-200 section">
+    <div class="text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-8">Tech-Stack Mastery</h2>
+    </div>
+    <div id="carousel" class="no-scrollbar flex overflow-x-auto px-4 sm:px-6 py-8 scroll-smooth space-x-4">
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">React & Vite</p>
+        <p class="text-sm">Modern Frontend</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">Full Stack Dev</p>
+        <p class="text-sm">End-to-End Systems</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">Power BI</p>
+        <p class="text-sm">Data Visualization</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">Machine Learning</p>
+        <p class="text-sm">ML for Analytics</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">ASP.NET</p>
+        <p class="text-sm">Web Backend</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">AWS & Firebase</p>
+        <p class="text-sm">Cloud & Hosting</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">APIs & Razor Pages</p>
+        <p class="text-sm">Dynamic Web</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">C / C++ / C#</p>
+        <p class="text-sm">Structured + OOP</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">Python</p>
+        <p class="text-sm">Scripting + ML</p>
+      </div>
+      <div class="min-w-[160px] sm:min-w-[200px] bg-gray-800 rounded-xl p-4 text-center dark:bg-gray-700 shrink-0 tilt" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+        <p class="font-semibold text-lg sm:text-xl mb-1">HTML / JS</p>
+        <p class="text-sm">Frontend Dev</p>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <h3 class="text-xl sm:text-2xl font-bold mb-6">With</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4 sm:px-6">
+        <div class="skill-tag gradient animate-fade-in-up delay-[100ms]">Team Leadership</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[200ms]">Strategic Networking</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[300ms]">Problem Solving</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[400ms]">Emotional Intelligence</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[500ms]">Mentorship</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[600ms]">Team management</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[700ms]">Operations Management</div>
+        <div class="skill-tag gradient animate-fade-in-up delay-[800ms]">Dynamic Presentations</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="bg-gradient-to-br from-[#004d3a] to-black py-16 sm:py-20 text-white dark:bg-gray-800 dark:text-gray-200 section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-2">Education</h2>
+      <div class="w-16 h-1 bg-[#00ffae] dark:bg-gray-200 mx-auto"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
+      <div class="relative group rounded-xl shadow-xl overflow-hidden" onclick="this.classList.toggle('active')">
+        <img src="assets/Christ.avif" alt="School" class="w-full h-48 sm:h-72 object-contain bg-white dark:bg-gray-800 p-4 sm:p-6">
+        <div class="absolute inset-0 bg-blue-600 bg-gradient-to-br from-blue-500 to-blue-700 text-white dark:text-gray-200 flex flex-col items-center justify-center text-center p-4 sm:p-6 opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition duration-300">
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Christ The King Matric</h3>
+          <p>Level: SSLC</p>
+          <p>Percentage: 93.2%</p>
+          <p>Location: Kumbakonam</p>
+        </div>
+      </div>
+      <div class="relative group rounded-xl shadow-xl overflow-hidden" onclick="this.classList.toggle('active')">
+        <img src="assets/srv.jpg" alt="School" class="w-full h-48 sm:h-72 object-contain bg-white dark:bg-gray-800 p-4 sm:p-6">
+        <div class="absolute inset-0 bg-red-600 bg-gradient-to-br from-red-500 to-red-700 text-white dark:text-gray-200 flex flex-col items-center justify-center text-center p-4 sm:p-6 opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition duration-300">
+          <h3 class="text-lg sm:text-xl font-bold mb-2">S.R.V Matric</h3>
+          <p>Level: HSC</p>
+          <p>Percentage: 94.96%</p>
+          <p>Location: Trichy</p>
+        </div>
+      </div>
+      <div class="relative group rounded-xl shadow-xl overflow-hidden" onclick="this.classList.toggle('active')">
+        <img src="assets/kct.jpg" alt="College" class="w-full h-48 sm:h-72 object-contain bg-white dark:bg-gray-800 p-4 sm:p-6">
+        <div class="absolute inset-0 bg-yellow-400 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black dark:text-gray-200 flex flex-col items-center justify-center text-center p-4 sm:p-6 opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition duration-300">
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Kumaraguru College of Technology</h3>
+          <p>Degree: B.E in EIE</p>
+          <p>CGPA: 8.703</p>
+          <p>Location: Coimbatore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section id="awards" class="bg-gradient-to-br from-black to-[#004225] text-white py-16 sm:py-20 dark:bg-gray-800 dark:text-gray-200 section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-2">Awards</h2>
+      <div class="w-16 h-1 bg-[#00ffae] dark:bg-gray-200 mx-auto"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg text-[#333] dark:bg-gray-700 dark:text-gray-200 relative group" onclick="this.classList.toggle('active')">
+        <img src="assets/mg.jpg" alt="MG Merit" class="w-full h-48 sm:h-56 object-cover opacity-100 group-hover:opacity-0 group-[.active]:opacity-0 transition-opacity duration-300">
+        <div class="p-4 sm:p-6 border-t-4 border-[#00FF7F] dark:border-gray-200 opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 absolute inset-0 bg-white dark:bg-gray-700 transition-opacity duration-300">
+          <h3 class="text-lg font-bold text-[#00B86B] dark:text-gray-200 mb-2">Mahatma Gandhi Merit Scholarship</h3>
+          <p>Awarded for outstanding academic performance among the department. I had awarded with Four MG awards.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg text-[#333] dark:bg-gray-700 dark:text-gray-200 relative group" onclick="this.classList.toggle('active')">
+        <img src="assets/ach.jpg" alt="Institutional Contributor" class="w-full h-48 sm:h-56 object-cover opacity-100 group-hover:opacity-0 group-[.active]:opacity-0 transition-opacity duration-300">
+        <div class="p-4 sm:p-6 border-t-4 border-[#00FF7F] dark:border-gray-200 opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 absolute inset-0 bg-white dark:bg-gray-700 transition-opacity duration-300">
+          <h3 class="text-lg font-bold text-[#00B86B] dark:text-gray-200 mb-2">Achievers Awards – Institutional Contributor's Award</h3>
+          <p>Recognized for significant contributions to institutional growth and community engagement.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg text-[#333] dark:bg-gray-700 dark:text-gray-200 relative group" onclick="this.classList.toggle('active')">
+        <img src="assets/out.jpg" alt="Best Outgoing Student" class="w-full h-48 sm:h-56 object-cover opacity-100 group-hover:opacity-0 group-[.active]:opacity-0 transition-opacity duration-300">
+        <div class="p-4 sm:p-6 border-t-4 border-[#00FF7F] dark:border-gray-200 opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 absolute inset-0 bg-white dark:bg-gray-700 transition-opacity duration-300">
+          <h3 class="text-lg font-bold text-[#00B86B] dark:text-gray-200 mb-2">Best Outgoing Student of the Department</h3>
+          <p>Honored as the top student for leadership, academics, and departmental impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles Section -->
+  <section id="roles" class="bg-[#001F1F] text-white py-16 dark:bg-gray-800 dark:text-gray-200 section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center underline decoration-green-500 dark:decoration-gray-200 mb-12">My Roles</h2>
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
+        <div>
+          <img src="assets/role.jpg" alt="President Role" class="w-full rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"/>
+        </div>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-bold text-green-400 dark:text-gray-200 mb-4">President - EIE Department Association</h3>
+          <p class="text-base sm:text-lg leading-relaxed mb-4 text-justify">
+            I am honored to serve as the President of the Electronics and Instrumentation Engineering (EIE) Department for the academic year 2024–2025.
+            Alongside our dedicated student representatives, I am committed to guiding peers through volunteerism, mentorship, and active engagement.
+          </p>
+          <p class="text-base sm:text-lg leading-relaxed mb-4 text-justify">
+            My journey began like many others — in the classroom — but growth came through volunteering, networking, and collaboration beyond academics.
+            From initial steps in student chapters to evolving into a strategic leader, I’ve embraced every challenge with resilience and purpose.
+          </p>
+          <p class="text-base sm:text-lg leading-relaxed text-justify">
+            Previously, I held roles such as Joint Secretary of the Department Association, Media Lead of IEEE CSS, and Program Lead of ISA KCT.
+            In my third year, I took on the role of Secretary and now serve as President. Through operations, mentoring, and event execution, I’ve developed
+            core strengths in proactive leadership, team synergy, and strategic planning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gradient-to-br from-black to-[#004225] text-white py-16 dark:bg-gray-900 dark:text-gray-200 section">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl sm:text-5xl font-bold underline decoration-green-500 dark:decoration-gray-200">Contact</h2>
+    </div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-gray-900 rounded-xl p-4 sm:p-6 shadow-lg text-center hover:bg-green-500 dark:hover:bg-gray-700 hover:text-black dark:hover:text-gray-200 transition-colors duration-300">
+          <h3 class="text-lg sm:text-xl font-semibold text-green-400 dark:text-gray-200 mb-2">Call me</h3>
+          <p>(+91) 7010370545</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-4 sm:p-6 shadow-lg text-center hover:bg-green-500 dark:hover:bg-gray-700 hover:text-black dark:hover:text-gray-200 transition-colors duration-300">
+          <h3 class="text-lg sm:text-xl font-semibold text-green-400 dark:text-gray-200 mb-2">E-mail</h3>
+          <p class="break-words text-sm sm:text-base">thirumalaivasan174@gmail.com</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-4 sm:p-6 shadow-lg text-center hover:bg-green-500 dark:hover:bg-gray-700 hover:text-black dark:hover:text-gray-200 transition-colors duration-300">
+          <h3 class="text-lg sm:text-xl font-semibold text-green-400 dark:text-gray-200 mb-2">Location</h3>
+          <p>Kumbakonam, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <h3 class="text-lg sm:text-lg font-semibold mb-2 text-green-400 dark:text-gray-200">Connect with me</h3>
+      <div class="flex justify-center gap-6 text-xl sm:text-2xl text-green-400 dark:text-gray-200">
+        <a href="https://linkedin.com/in/thirumalaivasan-nedunchezhian-157589225" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin hover:text-[#00ffae] transition-colors duration-200"></i>
+        </a>
+        <a href="https://www.instagram.com/_n.t_1_official?igsh=MnJjeDBlOGR1c2Rz" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram hover:text-[#00ffae] transition-colors duration-200"></i>
+        </a>
+        <a href="https://github.com/Thiru-174" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github hover:text-[#00ffae] transition-colors duration-200"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-green-400 py-6 text-center border-t border-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <p class="text-sm">© 2025 Thirumalaivasan K N. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
