@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thirumalaivasan Nedunchezhian - Portfolio</title>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
@@ -14,6 +15,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Disable right-click & drag -->
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("dragstart", e => e.preventDefault());
+  </script>
 </head>
 <body class="font-poppins bg-green-900 min-h-screen text-white dark:bg-gray-900 dark:text-gray-200">
   <!-- Preloader -->
@@ -313,6 +320,7 @@
 </body>
 
 </html>
+
 
 
 
