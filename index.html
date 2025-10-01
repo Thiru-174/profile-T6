@@ -22,38 +22,44 @@
   </div>
 
   <!-- Header -->
-  <header class="bg-green-900 text-white py-3 px-4 sm:px-6 fixed top-0 left-0 w-full z-40 flex flex-wrap justify-between items-center shadow-md transition-all duration-300 dark:bg-gray-900 dark:text-gray-100" id="header">
-    <button class="sm:hidden text-2xl focus:outline-none" id="menu-toggle" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    <nav class="hidden sm:block mt-2 sm:mt-0 w-full sm:w-auto" id="nav-menu">
-      <ul class="flex flex-col sm:flex-row sm:space-x-6 text-sm sm:text-base font-medium">
-        <li><a href="#home" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Home</a></li>
-        <li><a href="#about" class="hover:underline py-2 sm:py-0 transition-colors duration-200">About</a></li>
-        <li><a href="#skills" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Skills</a></li>
-        <li><a href="#education" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Education</a></li>
-        <li><a href="#awards" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Awards</a></li>
-        <li><a href="#roles" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Roles</a></li>
-        <li><a href="#contact" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="flex items-center space-x-2">
-      <div class="relative w-8 h-8 sm:w-12 sm:h-12">
-        <svg class="w-full h-full">
-          <circle cx="50%" cy="50%" r="45%" fill="none" stroke="#4ade80" stroke-width="2"/>
-          <line id="second-hand" x1="50%" y1="50%" x2="50%" y2="20%" stroke="#00ffae" stroke-width="1.5"/>
-        </svg>
-        <div class="absolute inset-0 flex items-center justify-center text-[10px] sm:text-xs font-medium" id="current-time"></div>
-      </div>
-      <div class="flex flex-col items-center group">
-        <div class="flex items-center space-x-1">
-          <i class="fas fa-calendar-alt text-green-400 text-xs sm:text-sm group-hover:text-[#00ffae] transition-colors duration-200"></i>
-          <span id="current-date" class="text-[10px] sm:text-xs font-medium"></span>
-        </div>
-        <span id="current-year" class="text-[8px] sm:text-[10px] font-medium"></span>
-      </div>
+ <header class="bg-green-900 text-white py-3 px-4 sm:px-6 fixed top-0 left-0 w-full z-40 flex justify-between items-center shadow-md transition-all duration-300 dark:bg-gray-900 dark:text-gray-100" id="header">
+  <!-- Mobile Menu Toggle -->
+  <button class="sm:hidden text-2xl focus:outline-none" id="menu-toggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Navigation Menu (Aligned Right) -->
+  <nav class="hidden sm:block w-auto ml-auto" id="nav-menu">
+    <ul class="flex flex-col sm:flex-row sm:space-x-6 text-sm sm:text-base font-medium">
+      <li><a href="#home" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Home</a></li>
+      <li><a href="#about" class="hover:underline py-2 sm:py-0 transition-colors duration-200">About</a></li>
+      <li><a href="#skills" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Skills</a></li>
+      <li><a href="#education" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Education</a></li>
+      <li><a href="#awards" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Awards</a></li>
+      <li><a href="#roles" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Roles</a></li>
+      <li><a href="#contact" class="hover:underline py-2 sm:py-0 transition-colors duration-200">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Date & Time (with extra spacing) -->
+  <div class="flex items-center space-x-6 ml-6">
+    <div class="relative w-8 h-8 sm:w-12 sm:h-12">
+      <svg class="w-full h-full">
+        <circle cx="50%" cy="50%" r="45%" fill="none" stroke="#4ade80" stroke-width="2"/>
+        <line id="second-hand" x1="50%" y1="50%" x2="50%" y2="20%" stroke="#00ffae" stroke-width="1.5"/>
+      </svg>
+      <div class="absolute inset-0 flex items-center justify-center text-[10px] sm:text-xs font-medium" id="current-time"></div>
     </div>
-  </header>
+    <div class="flex flex-col items-center group">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-calendar-alt text-green-400 text-xs sm:text-sm group-hover:text-[#00ffae] transition-colors duration-200"></i>
+        <span id="current-date" class="text-[10px] sm:text-xs font-medium"></span>
+      </div>
+      <span id="current-year" class="text-[8px] sm:text-[10px] font-medium"></span>
+    </div>
+  </div>
+</header>
+
 
   <!-- Main Content -->
 <main id="home" class="relative w-full h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-32">
@@ -307,4 +313,5 @@
 </body>
 
 </html>
+
 
